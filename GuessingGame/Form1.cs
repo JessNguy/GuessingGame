@@ -42,6 +42,12 @@ namespace GuessingGame
             else
             {
                 outputLabel.Text = "You Got it!";
+
+                Form f = this.FindForm();
+                f.Controls.Remove(this);
+
+                ResultScreen rs = new ResultScreen();
+                f.Controls.Add(rs);
             }
 
             // clear out the input box 
