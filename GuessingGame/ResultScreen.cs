@@ -14,6 +14,24 @@ namespace GuessingGame
         public ResultScreen()
         {
             InitializeComponent();
+            
+            
+            labelInformation1.Text = "Guess: " + GuessingGame.guessCount;
+            labelInformation2.Text = "Orginal Order: ";
+            for (int x = 0; x < GuessingGame.numberGuess.Count; x++)
+            {
+                labelNumber2.Text = " " + Convert.ToString(GuessingGame.numberGuess[x]);
+            }
+
+            labelInformation3.Text = "Sorted Order: " ;
+
+            GuessingGame.numberGuess.Sort();
+
+            for (int x = 0; x < GuessingGame.numberGuess.Count; x++)
+            {
+                labelNumber3.Text = " " + Convert.ToString(GuessingGame.numberGuess[x]);
+            }
+
         }
     }
 }
